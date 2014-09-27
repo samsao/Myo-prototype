@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <MyoKit/MyoKit.h>
-#import "SSAHomeViewController.h"
+#import "SSAStartViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +24,7 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    UINavigationController *vc = [[UINavigationController alloc] initWithRootViewController:[SSAHomeViewController new]];;
+    UINavigationController *vc = [[UINavigationController alloc] initWithRootViewController:[SSAStartViewController new]];
     
     self.window.rootViewController = vc;
     

@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B291B88119D7218200EDE351 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B291B88019D7218200EDE351 /* MyoKit.framework */; };
+		0366DB94EB674658B8ACA35E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C739837CBF12407295C761D1 /* libPods.a */; };
+		B291B88619D7676800EDE351 /* SSAChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B291B88419D7676800EDE351 /* SSAChartViewController.m */; };
+		B291B88719D7676800EDE351 /* SSAChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B291B88519D7676800EDE351 /* SSAChartViewController.xib */; };
+		B291B88919D76B2400EDE351 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B291B88819D76B2400EDE351 /* MyoKit.framework */; };
+		B291B88E19D76BCC00EDE351 /* SSAMyoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B291B88D19D76BCC00EDE351 /* SSAMyoUtils.m */; };
+		B291B89619D76E6D00EDE351 /* NSMutableArray+SSAQueueStack.m in Sources */ = {isa = PBXBuildFile; fileRef = B291B89519D76E6D00EDE351 /* NSMutableArray+SSAQueueStack.m */; };
+		B291B89C19D770D000EDE351 /* SSAStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B291B89A19D770D000EDE351 /* SSAStartViewController.m */; };
+		B291B89D19D770D000EDE351 /* SSAStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B291B89B19D770D000EDE351 /* SSAStartViewController.xib */; };
 		B2DD42EF19D6FCBD0002AAED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DD42EE19D6FCBD0002AAED /* main.m */; };
 		B2DD42F219D6FCBD0002AAED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DD42F119D6FCBD0002AAED /* AppDelegate.m */; };
 		B2DD42FA19D6FCBD0002AAED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2DD42F919D6FCBD0002AAED /* Images.xcassets */; };
@@ -30,7 +37,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B291B88019D7218200EDE351 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
+		01ACD111AA1A4EC5AE4DE61D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		B291B88319D7676800EDE351 /* SSAChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSAChartViewController.h; path = Classes/ViewControllers/ChartVC/SSAChartViewController.h; sourceTree = "<group>"; };
+		B291B88419D7676800EDE351 /* SSAChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSAChartViewController.m; path = Classes/ViewControllers/ChartVC/SSAChartViewController.m; sourceTree = "<group>"; };
+		B291B88519D7676800EDE351 /* SSAChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SSAChartViewController.xib; path = Classes/ViewControllers/ChartVC/SSAChartViewController.xib; sourceTree = "<group>"; };
+		B291B88819D76B2400EDE351 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
+		B291B88C19D76BCC00EDE351 /* SSAMyoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSAMyoUtils.h; path = Classes/Utils/MyoUtils/SSAMyoUtils.h; sourceTree = "<group>"; };
+		B291B88D19D76BCC00EDE351 /* SSAMyoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSAMyoUtils.m; path = Classes/Utils/MyoUtils/SSAMyoUtils.m; sourceTree = "<group>"; };
+		B291B89419D76E6D00EDE351 /* NSMutableArray+SSAQueueStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+SSAQueueStack.h"; path = "Classes/Categories/QueueStack/NSMutableArray+SSAQueueStack.h"; sourceTree = "<group>"; };
+		B291B89519D76E6D00EDE351 /* NSMutableArray+SSAQueueStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+SSAQueueStack.m"; path = "Classes/Categories/QueueStack/NSMutableArray+SSAQueueStack.m"; sourceTree = "<group>"; };
+		B291B89919D770D000EDE351 /* SSAStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSAStartViewController.h; path = Classes/ViewControllers/StartVC/SSAStartViewController.h; sourceTree = "<group>"; };
+		B291B89A19D770D000EDE351 /* SSAStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSAStartViewController.m; path = Classes/ViewControllers/StartVC/SSAStartViewController.m; sourceTree = "<group>"; };
+		B291B89B19D770D000EDE351 /* SSAStartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SSAStartViewController.xib; path = Classes/ViewControllers/StartVC/SSAStartViewController.xib; sourceTree = "<group>"; };
 		B2DD42E919D6FCBD0002AAED /* Smart App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DD42ED19D6FCBD0002AAED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2DD42EE19D6FCBD0002AAED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,6 +64,7 @@
 		B2DD431C19D6FD790002AAED /* SSAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSAHomeViewController.h; path = Classes/ViewControllers/HomeVC/SSAHomeViewController.h; sourceTree = "<group>"; };
 		B2DD431D19D6FD790002AAED /* SSAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSAHomeViewController.m; path = Classes/ViewControllers/HomeVC/SSAHomeViewController.m; sourceTree = "<group>"; };
 		B2DD431E19D6FD790002AAED /* SSAHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SSAHomeViewController.xib; path = Classes/ViewControllers/HomeVC/SSAHomeViewController.xib; sourceTree = "<group>"; };
+		C739837CBF12407295C761D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B291B88119D7218200EDE351 /* MyoKit.framework in Frameworks */,
 				B2DD431819D6FCFC0002AAED /* SystemConfiguration.framework in Frameworks */,
+				B291B88919D76B2400EDE351 /* MyoKit.framework in Frameworks */,
 				B2DD431619D6FCF20002AAED /* CoreBluetooth.framework in Frameworks */,
+				0366DB94EB674658B8ACA35E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +89,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACFC196EC154428EA0E001A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C739837CBF12407295C761D1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B291B88219D7675400EDE351 /* Chart VC */ = {
+			isa = PBXGroup;
+			children = (
+				B291B88319D7676800EDE351 /* SSAChartViewController.h */,
+				B291B88419D7676800EDE351 /* SSAChartViewController.m */,
+				B291B88519D7676800EDE351 /* SSAChartViewController.xib */,
+			);
+			name = "Chart VC";
+			sourceTree = "<group>";
+		};
+		B291B88A19D76BA700EDE351 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B291B88B19D76BAF00EDE351 /* MyoUtils */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		B291B88B19D76BAF00EDE351 /* MyoUtils */ = {
+			isa = PBXGroup;
+			children = (
+				B291B88C19D76BCC00EDE351 /* SSAMyoUtils.h */,
+				B291B88D19D76BCC00EDE351 /* SSAMyoUtils.m */,
+			);
+			name = MyoUtils;
+			sourceTree = "<group>";
+		};
+		B291B88F19D76DDB00EDE351 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B291B89719D76E7200EDE351 /* QueueStack */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		B291B89719D76E7200EDE351 /* QueueStack */ = {
+			isa = PBXGroup;
+			children = (
+				B291B89419D76E6D00EDE351 /* NSMutableArray+SSAQueueStack.h */,
+				B291B89519D76E6D00EDE351 /* NSMutableArray+SSAQueueStack.m */,
+			);
+			name = QueueStack;
+			sourceTree = "<group>";
+		};
+		B291B89819D770B700EDE351 /* Start VC */ = {
+			isa = PBXGroup;
+			children = (
+				B291B89919D770D000EDE351 /* SSAStartViewController.h */,
+				B291B89A19D770D000EDE351 /* SSAStartViewController.m */,
+				B291B89B19D770D000EDE351 /* SSAStartViewController.xib */,
+			);
+			name = "Start VC";
+			sourceTree = "<group>";
+		};
 		B2DD42E019D6FCBD0002AAED = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +159,8 @@
 				B2DD42EB19D6FCBD0002AAED /* Smart App */,
 				B2DD430519D6FCBD0002AAED /* Smart AppTests */,
 				B2DD42EA19D6FCBD0002AAED /* Products */,
+				01ACD111AA1A4EC5AE4DE61D /* Pods.xcconfig */,
+				ACFC196EC154428EA0E001A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,7 +216,7 @@
 		B2DD431219D6FCC90002AAED /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				B291B88019D7218200EDE351 /* MyoKit.framework */,
+				B291B88819D76B2400EDE351 /* MyoKit.framework */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
@@ -140,6 +224,8 @@
 		B2DD431919D6FD230002AAED /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B291B88F19D76DDB00EDE351 /* Categories */,
+				B291B88A19D76BA700EDE351 /* Utils */,
 				B2DD431A19D6FD290002AAED /* View controllers */,
 			);
 			name = Classes;
@@ -148,6 +234,8 @@
 		B2DD431A19D6FD290002AAED /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B291B89819D770B700EDE351 /* Start VC */,
+				B291B88219D7675400EDE351 /* Chart VC */,
 				B2DD431B19D6FD360002AAED /* Home VC */,
 			);
 			name = "View controllers";
@@ -170,9 +258,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2DD430C19D6FCBD0002AAED /* Build configuration list for PBXNativeTarget "Smart App" */;
 			buildPhases = (
+				F7ABBF84443844268578FDA1 /* Check Pods Manifest.lock */,
 				B2DD42E519D6FCBD0002AAED /* Sources */,
 				B2DD42E619D6FCBD0002AAED /* Frameworks */,
 				B2DD42E719D6FCBD0002AAED /* Resources */,
+				CB07C1DB053D4353929A42AC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,7 +336,9 @@
 			files = (
 				B2DD42FD19D6FCBD0002AAED /* LaunchScreen.xib in Resources */,
 				B2DD42FA19D6FCBD0002AAED /* Images.xcassets in Resources */,
+				B291B89D19D770D000EDE351 /* SSAStartViewController.xib in Resources */,
 				B2DD432019D6FD790002AAED /* SSAHomeViewController.xib in Resources */,
+				B291B88719D7676800EDE351 /* SSAChartViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +351,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CB07C1DB053D4353929A42AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7ABBF84443844268578FDA1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B2DD42E519D6FCBD0002AAED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -266,7 +391,11 @@
 			files = (
 				B2DD42F219D6FCBD0002AAED /* AppDelegate.m in Sources */,
 				B2DD431F19D6FD790002AAED /* SSAHomeViewController.m in Sources */,
+				B291B89619D76E6D00EDE351 /* NSMutableArray+SSAQueueStack.m in Sources */,
 				B2DD42EF19D6FCBD0002AAED /* main.m in Sources */,
+				B291B88E19D76BCC00EDE351 /* SSAMyoUtils.m in Sources */,
+				B291B89C19D770D000EDE351 /* SSAStartViewController.m in Sources */,
+				B291B88619D7676800EDE351 /* SSAChartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,11 +509,14 @@
 		};
 		B2DD430D19D6FCBD0002AAED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01ACD111AA1A4EC5AE4DE61D /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lukasz Piliszczuk (RG25JN8ZC4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Smart",
+					App,
 					"$(PROJECT_DIR)/Smart",
 					App,
 					"$(PROJECT_DIR)/Smart",
@@ -399,11 +531,14 @@
 		};
 		B2DD430E19D6FCBD0002AAED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01ACD111AA1A4EC5AE4DE61D /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lukasz Piliszczuk (RG25JN8ZC4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Smart",
+					App,
 					"$(PROJECT_DIR)/Smart",
 					App,
 					"$(PROJECT_DIR)/Smart",

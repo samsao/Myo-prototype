@@ -8,7 +8,7 @@
             <connections>
                 <outlet property="connectButton" destination="tkA-fA-5E9" id="3os-Ay-S9C"/>
                 <outlet property="logOrientationButton" destination="cVb-WT-iv7" id="pn5-aU-uR5"/>
-                <outlet property="logPosesButton" destination="bee-U3-dYq" id="YqC-u2-zRd"/>
+                <outlet property="reccordButton" destination="2hP-ex-YlY" id="BEZ-Qp-UCB"/>
                 <outlet property="vibrateButton" destination="g9d-9C-KMG" id="d6b-TQ-oWv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -18,17 +18,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkA-fA-5E9">
-                    <rect key="frame" x="124" y="211" width="166" height="49"/>
-                    <state key="normal" title="Connect myo">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="connectClick:" destination="-1" eventType="touchUpInside" id="0X8-gB-PJq"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVb-WT-iv7">
-                    <rect key="frame" x="41" y="361" width="333" height="49"/>
+                    <rect key="frame" x="41" y="205" width="333" height="49"/>
                     <state key="normal" title="Start logging orientation">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -36,22 +27,31 @@
                         <action selector="logOrientationClick:" destination="-1" eventType="touchUpInside" id="jRi-mm-fuA"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bee-U3-dYq">
-                    <rect key="frame" x="36" y="418" width="333" height="49"/>
-                    <state key="normal" title="Start logging poses">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="logPosesClick:" destination="-1" eventType="touchUpInside" id="rwT-Yc-dOA"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9d-9C-KMG">
-                    <rect key="frame" x="41" y="475" width="333" height="49"/>
+                    <rect key="frame" x="41" y="262" width="333" height="49"/>
                     <state key="normal" title="Vibrate myo">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="vibrateClick:" destination="-1" eventType="touchUpInside" id="I6z-mi-7ij"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkA-fA-5E9">
+                    <rect key="frame" x="124" y="148" width="166" height="49"/>
+                    <state key="normal" title="Connect myo">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="connectClick:" destination="-1" eventType="touchUpInside" id="0X8-gB-PJq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hP-ex-YlY">
+                    <rect key="frame" x="81" y="399" width="252" height="30"/>
+                    <state key="normal" title="Start record">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="reccordClick:" destination="-1" eventType="touchUpInside" id="qc8-UZ-Pm2"/>
                     </connections>
                 </button>
             </subviews>
