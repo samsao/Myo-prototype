@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B291B88119D7218200EDE351 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B291B88019D7218200EDE351 /* MyoKit.framework */; };
 		B2DD42EF19D6FCBD0002AAED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DD42EE19D6FCBD0002AAED /* main.m */; };
 		B2DD42F219D6FCBD0002AAED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DD42F119D6FCBD0002AAED /* AppDelegate.m */; };
-		B2DD42F519D6FCBD0002AAED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DD42F419D6FCBD0002AAED /* ViewController.m */; };
-		B2DD42F819D6FCBD0002AAED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DD42F619D6FCBD0002AAED /* Main.storyboard */; };
 		B2DD42FA19D6FCBD0002AAED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2DD42F919D6FCBD0002AAED /* Images.xcassets */; };
 		B2DD42FD19D6FCBD0002AAED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2DD42FB19D6FCBD0002AAED /* LaunchScreen.xib */; };
 		B2DD430919D6FCBD0002AAED /* Smart_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DD430819D6FCBD0002AAED /* Smart_AppTests.m */; };
+		B2DD431619D6FCF20002AAED /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2DD431519D6FCF20002AAED /* CoreBluetooth.framework */; };
+		B2DD431819D6FCFC0002AAED /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2DD431719D6FCFC0002AAED /* SystemConfiguration.framework */; };
+		B2DD431F19D6FD790002AAED /* SSAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DD431D19D6FD790002AAED /* SSAHomeViewController.m */; };
+		B2DD432019D6FD790002AAED /* SSAHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2DD431E19D6FD790002AAED /* SSAHomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +30,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B291B88019D7218200EDE351 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
 		B2DD42E919D6FCBD0002AAED /* Smart App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DD42ED19D6FCBD0002AAED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2DD42EE19D6FCBD0002AAED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2DD42F019D6FCBD0002AAED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B2DD42F119D6FCBD0002AAED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B2DD42F319D6FCBD0002AAED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B2DD42F419D6FCBD0002AAED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B2DD42F719D6FCBD0002AAED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2DD42F919D6FCBD0002AAED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B2DD42FC19D6FCBD0002AAED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B2DD430219D6FCBD0002AAED /* Smart AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DD430719D6FCBD0002AAED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2DD430819D6FCBD0002AAED /* Smart_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Smart_AppTests.m; sourceTree = "<group>"; };
+		B2DD431519D6FCF20002AAED /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		B2DD431719D6FCFC0002AAED /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B2DD431C19D6FD790002AAED /* SSAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSAHomeViewController.h; path = Classes/ViewControllers/HomeVC/SSAHomeViewController.h; sourceTree = "<group>"; };
+		B2DD431D19D6FD790002AAED /* SSAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSAHomeViewController.m; path = Classes/ViewControllers/HomeVC/SSAHomeViewController.m; sourceTree = "<group>"; };
+		B2DD431E19D6FD790002AAED /* SSAHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SSAHomeViewController.xib; path = Classes/ViewControllers/HomeVC/SSAHomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B291B88119D7218200EDE351 /* MyoKit.framework in Frameworks */,
+				B2DD431819D6FCFC0002AAED /* SystemConfiguration.framework in Frameworks */,
+				B2DD431619D6FCF20002AAED /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,8 @@
 		B2DD42E019D6FCBD0002AAED = {
 			isa = PBXGroup;
 			children = (
+				B2DD431719D6FCFC0002AAED /* SystemConfiguration.framework */,
+				B2DD431519D6FCF20002AAED /* CoreBluetooth.framework */,
 				B2DD42EB19D6FCBD0002AAED /* Smart App */,
 				B2DD430519D6FCBD0002AAED /* Smart AppTests */,
 				B2DD42EA19D6FCBD0002AAED /* Products */,
@@ -81,11 +92,10 @@
 		B2DD42EB19D6FCBD0002AAED /* Smart App */ = {
 			isa = PBXGroup;
 			children = (
+				B2DD431919D6FD230002AAED /* Classes */,
+				B2DD431219D6FCC90002AAED /* Libs */,
 				B2DD42F019D6FCBD0002AAED /* AppDelegate.h */,
 				B2DD42F119D6FCBD0002AAED /* AppDelegate.m */,
-				B2DD42F319D6FCBD0002AAED /* ViewController.h */,
-				B2DD42F419D6FCBD0002AAED /* ViewController.m */,
-				B2DD42F619D6FCBD0002AAED /* Main.storyboard */,
 				B2DD42F919D6FCBD0002AAED /* Images.xcassets */,
 				B2DD42FB19D6FCBD0002AAED /* LaunchScreen.xib */,
 				B2DD42EC19D6FCBD0002AAED /* Supporting Files */,
@@ -117,6 +127,40 @@
 				B2DD430719D6FCBD0002AAED /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2DD431219D6FCC90002AAED /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				B291B88019D7218200EDE351 /* MyoKit.framework */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		B2DD431919D6FD230002AAED /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B2DD431A19D6FD290002AAED /* View controllers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		B2DD431A19D6FD290002AAED /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2DD431B19D6FD360002AAED /* Home VC */,
+			);
+			name = "View controllers";
+			sourceTree = "<group>";
+		};
+		B2DD431B19D6FD360002AAED /* Home VC */ = {
+			isa = PBXGroup;
+			children = (
+				B2DD431C19D6FD790002AAED /* SSAHomeViewController.h */,
+				B2DD431D19D6FD790002AAED /* SSAHomeViewController.m */,
+				B2DD431E19D6FD790002AAED /* SSAHomeViewController.xib */,
+			);
+			name = "Home VC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +212,7 @@
 				TargetAttributes = {
 					B2DD42E819D6FCBD0002AAED = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 8UQUNTB23H;
 					};
 					B2DD430119D6FCBD0002AAED = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -199,9 +244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2DD42F819D6FCBD0002AAED /* Main.storyboard in Resources */,
 				B2DD42FD19D6FCBD0002AAED /* LaunchScreen.xib in Resources */,
 				B2DD42FA19D6FCBD0002AAED /* Images.xcassets in Resources */,
+				B2DD432019D6FD790002AAED /* SSAHomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2DD42F519D6FCBD0002AAED /* ViewController.m in Sources */,
 				B2DD42F219D6FCBD0002AAED /* AppDelegate.m in Sources */,
+				B2DD431F19D6FD790002AAED /* SSAHomeViewController.m in Sources */,
 				B2DD42EF19D6FCBD0002AAED /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +289,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B2DD42F619D6FCBD0002AAED /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2DD42F719D6FCBD0002AAED /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B2DD42FB19D6FCBD0002AAED /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -345,9 +382,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lukasz Piliszczuk (RG25JN8ZC4)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Smart",
+					App,
+					"$(PROJECT_DIR)/Smart",
+					App,
+				);
 				INFOPLIST_FILE = "Smart App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "60557173-e08a-4eaa-855f-83b53faeafa7";
 			};
 			name = Debug;
 		};
@@ -355,9 +401,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lukasz Piliszczuk (RG25JN8ZC4)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Smart",
+					App,
+					"$(PROJECT_DIR)/Smart",
+					App,
+				);
 				INFOPLIST_FILE = "Smart App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "60557173-e08a-4eaa-855f-83b53faeafa7";
 			};
 			name = Release;
 		};
@@ -414,6 +469,7 @@
 				B2DD430E19D6FCBD0002AAED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2DD430F19D6FCBD0002AAED /* Build configuration list for PBXNativeTarget "Smart AppTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +478,7 @@
 				B2DD431119D6FCBD0002AAED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SSAHomeViewController.h
 //  Smart App
 //
 //  Created by Lukasz on 27/09/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SSAHomeViewController : UIViewController
 
 @end
-
