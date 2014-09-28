@@ -284,7 +284,7 @@ static int const kExerciceRemoteId = 10;
             }
             
             if(coord.pitch >= _referenceMovementMaxCoord.pitch ||
-               coord.pitch <= _userMaxReachCoord.pitch - kDescendingDeltaDetection) {
+               (coord.pitch <= _userMaxReachCoord.pitch - kDescendingDeltaDetection && coord.pitch >= _referenceMovementMinCoord.pitch + kDescendingDeltaDetection)) {
                 NSLog(@"%d >= %d OR %d <= %d", coord.pitch, _referenceMovementMaxCoord.pitch, coord.pitch, _userMaxReachCoord.pitch - kDescendingDeltaDetection);
                 NSLog(@"Switch to MODE DESC from ASC");
                 
