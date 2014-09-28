@@ -23,8 +23,10 @@
 @property (strong, nonatomic) CHCircleGaugeView *circleChartView;
 
 @property (strong, nonatomic) NSMutableArray *referenceMovement;
+@property (strong, nonatomic) NSMutableArray *userMovement;
 @property (assign, nonatomic) BOOL shouldReccord;
 @property (assign, nonatomic) BOOL shouldPauseReccord;
+@property (assign, nonatomic) BOOL showBothMovements;
 @property (assign, nonatomic) double lastEventSeconds;
 
 - (IBAction)switchValueChanged:(id)sender;
@@ -109,35 +111,52 @@
 
 - (NSUInteger)numberOfLinesInLineChartView:(JBLineChartView *)lineChartView
 {
-    return 3;
+    return _userMovement ? 6 : 3;
 }
 
 - (NSUInteger)lineChartView:(JBLineChartView *)lineChartView numberOfVerticalValuesAtLineIndex:(NSUInteger)lineIndex
 {
+    if(_userMovement) {
+        return _userMovement.count;
+    }
+    
     return _referenceMovement ? _referenceMovement.count : 0;
 }
 
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView verticalValueForHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
-    NSArray *axises = _referenceMovement[horizontalIndex];
-    return [axises[lineIndex] floatValue];
+    if(lineIndex <= 2) {
+        NSUInteger index = horizontalIndex;
+        if(horizontalIndex > _referenceMovement.count - 1) {
+            index = _referenceMovement.count - 1;
+        }
+        NSArray *axises = _referenceMovement[index];
+        return [axises[lineIndex] floatValue];
+    }
+    
+    NSArray *axises = _userMovement[horizontalIndex];
+    return [axises[lineIndex - 3] floatValue];
 }
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForLineAtLineIndex:(NSUInteger)lineIndex
 {
     //    return lineIndex <= 2 ? [UIColor redColor] : [UIColor blackColor];
-    
+    BOOL alpha = _userMovement != nil;
+    CGFloat alphaVal = 0.2f;
     switch (lineIndex) {
         case 0:
-            return [UIColor redColor];
-            break;
+            return alpha ? [[UIColor redColor] colorWithAlphaComponent:alphaVal] : [UIColor redColor];
         case 1:
-            return [UIColor greenColor];
-            break;
+            return alpha ? [[UIColor greenColor] colorWithAlphaComponent:alphaVal] : [UIColor greenColor];
         case 2:
+            return alpha ? [[UIColor blueColor] colorWithAlphaComponent:alphaVal] : [UIColor blueColor];
+        case 3:
+            return [UIColor redColor];
+        case 4:
+            return [UIColor greenColor];
+        case 5:
         default:
             return [UIColor blueColor];
-            break;
     }
 }
 
@@ -170,15 +189,10 @@
     GLKQuaternion quat = orientation.quaternion;
     
     
-//    NSArray *axises = [SSAMyoUtils convertedAxisFromQuaternion:quat];
-//    if(_liveMovement.count > 60) {
-//        [_liveMovement queuePop];
-//    }
-//    
-//    [_liveMovement addObject:axises];
-//    [_reccordMovement addObject:axises];
-//    
-//    [_graphView reloadData];
+    NSArray *axises = [SSAMyoUtils convertedAxisFromQuaternion:quat];
+    [_userMovement addObject:axises];
+    
+    [_lineChartView reloadData];
 }
 
 
@@ -188,13 +202,18 @@
 {
     _lineChartView.hidden = !_lineChartView.hidden;
     _circleChartView.hidden = !_circleChartView.hidden;
-    
-    NSLog(@"Show line %d", _lineChartView.hidden);
 }
 
 - (IBAction)startClick:(id)sender
 {
+    _shouldReccord = !_shouldReccord;
     
+    if(_shouldReccord) {
+        _userMovement = [NSMutableArray array];
+        [_startButton setTitle:@"Stop exercice" forState:UIControlStateNormal];
+    } else {
+        [_startButton setTitle:@"Restart exercice" forState:UIControlStateNormal];
+    }
 }
 
 @end
