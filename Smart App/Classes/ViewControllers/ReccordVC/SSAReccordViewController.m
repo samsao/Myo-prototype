@@ -191,6 +191,7 @@
             _shouldReccord = NO;
             
             NSMutableArray *objects = [NSMutableArray arrayWithCapacity:_reccordMovement.count];
+            int order = 0;
             for(NSArray *axises in _reccordMovement) {
                 PFObject *object = [PFObject objectWithClassName:@"ExerciceData"];
                 object[@"type"] = @"Frontal elevation";
@@ -198,7 +199,10 @@
                 object[@"roll"] = axises[0];
                 object[@"pitch"] = axises[1];
                 object[@"yaw"] = axises[2];
+                object[@"order"] = [NSNumber numberWithInt:order];
                 [objects addObject:object];
+                
+                order++;
             }
             
             NSLog(@"Retreiving existing exercice");

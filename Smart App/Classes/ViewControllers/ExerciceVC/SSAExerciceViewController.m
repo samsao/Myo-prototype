@@ -88,6 +88,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"ExerciceData"];
     [query whereKey:@"typeID" equalTo:@10];
     query.limit = 1000;
+    [query orderByAscending:@"order"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         NSLog(@"Retreived %ld objects", (long)objects.count);
         _referenceMovement = [NSMutableArray arrayWithCapacity:objects.count];
