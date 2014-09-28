@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <MyoKit/MyoKit.h>
 #import "SSAStartViewController.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -21,6 +22,9 @@
 {
     [TLMHub sharedHub];
     [TLMHub sharedHub].applicationIdentifier = @"com.samsao.smartapp";
+    
+    [Parse setApplicationId:@"UL1HrX8pATNbmoEfREItjPf9ZVWT5hsc0cSw0Y1T"
+                  clientKey:@"YwqY4N5NnBxZ3YVaNoMCvX4QkKLcP0AS0TXaUyHE"];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     

@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSMutableArray *movement;
 @property (strong, nonatomic) NSArray *referenceAxises;
 @property (assign, nonatomic) BOOL shouldReccord;
+@property (assign, nonatomic) BOOL shouldPauseReccord;
 @property (assign, nonatomic) double lastEventSeconds;
 
 - (IBAction)reccordClick:(id)sender;
@@ -55,6 +56,11 @@
                                              selector:@selector(didReceiveOrientationEvent:)
                                                  name:TLMMyoDidReceiveOrientationEventNotification
                                                object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didReceivePoseEvent:)
+                                                 name:TLMMyoDidReceivePoseChangedNotification
+                                               object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -62,6 +68,7 @@
     [super viewWillDisappear:animated];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:TLMMyoDidReceiveOrientationEventNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:TLMMyoDidReceivePoseChangedNotification object:nil];
 }
 
 
@@ -69,7 +76,7 @@
 
 - (NSUInteger)numberOfLinesInLineChartView:(JBLineChartView *)lineChartView
 {
-    return _referenceAxises ? 2 : 1;
+    return _referenceAxises ? 6 : 3;
 }
 
 - (NSUInteger)lineChartView:(JBLineChartView *)lineChartView numberOfVerticalValuesAtLineIndex:(NSUInteger)lineIndex
@@ -80,19 +87,32 @@
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView verticalValueForHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
     NSArray *axises;
-    if(_referenceAxises && lineIndex == 0) {
+    NSUInteger index;
+    if(_referenceAxises && lineIndex <= 2) {
         axises = _referenceAxises;
     } else {
         axises = _movement[horizontalIndex];
     }
     
-    CGFloat val = [axises[2] floatValue];
-    return val;
+    return [axises[lineIndex] floatValue];
 }
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForLineAtLineIndex:(NSUInteger)lineIndex
 {
-    return lineIndex == 0 ? [UIColor redColor] : [UIColor blackColor];
+//    return lineIndex <= 2 ? [UIColor redColor] : [UIColor blackColor];
+    
+    switch (lineIndex) {
+        case 0:
+            return [UIColor redColor];
+            break;
+        case 1:
+            return [UIColor greenColor];
+            break;
+        case 2:
+        default:
+            return [UIColor blueColor];
+            break;
+    }
 }
 
 
@@ -101,6 +121,10 @@
 - (void)didReceiveOrientationEvent:(NSNotification*)notification
 {
     if(!_shouldReccord) {
+        return;
+    }
+    
+    if(_shouldPauseReccord) {
         return;
     }
     
@@ -124,6 +148,27 @@
     
     [_graphView reloadData];
 }
+
+- (void)didReceivePoseChange:(NSNotification*)notification
+{
+    TLMPose *pose = notification.userInfo[kTLMKeyPose];
+    switch (pose.type) {
+        case TLMPoseTypeFist:
+            if(_shouldReccord) {
+                _shouldPauseReccord = YES;
+            }
+            break;
+        case TLMPoseTypeWaveIn:
+            [_reccordButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+            break;
+        case TLMPoseTypeFingersSpread:
+            if(_shouldReccord) {
+                _shouldPauseReccord = NO;
+            }
+            break;
+    }
+}
+
 
 
 # pragma mark - Actions

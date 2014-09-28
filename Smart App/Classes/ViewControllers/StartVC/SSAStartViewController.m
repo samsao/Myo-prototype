@@ -9,10 +9,21 @@
 #import "SSAStartViewController.h"
 #import <MyoKit/MyoKit.h>
 #import "SSAChartViewController.h"
+#import "SSAReccordViewController.h"
+#import <Parse/Parse.h>
+#import "SSAExerciceViewController.h"
 
 @interface SSAStartViewController ()
 
 @property (strong, nonatomic) TLMMyo *myo;
+@property (weak, nonatomic) IBOutlet UILabel *connectingLabel;
+@property (weak, nonatomic) IBOutlet UIButton *reccordExerciceButton;
+@property (weak, nonatomic) IBOutlet UIButton *deleteTestDataButton;
+@property (weak, nonatomic) IBOutlet UIButton *exerciceButton;
+
+- (IBAction)reccordExerciceClick:(id)sender;
+- (IBAction)deleteTestDataClick:(id)sender;
+- (IBAction)exerciceClick:(id)sender;
 
 @end
 
@@ -20,7 +31,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.title = @"Smart app";
+    self.navigationController.navigationBar.translucent = NO;
+    
+    _reccordExerciceButton.hidden = YES;
+    _deleteTestDataButton.hidden = YES;
+    _exerciceButton.hidden = YES;
+    _connectingLabel.text = @"Connecting to Myo...";
     
     [self connectMyo];
 }
@@ -69,7 +87,10 @@
     _myo = devices[0];
     NSLog(@"Myo connected: %@ - %@", _myo.name, [_myo.identifier UUIDString]);
     
-    [self.navigationController pushViewController:[SSAChartViewController new] animated:YES];
+    _connectingLabel.text = @"You are now connected to Myo";
+    _reccordExerciceButton.hidden = NO;
+    _deleteTestDataButton.hidden = NO;
+    _exerciceButton.hidden = NO;
 }
 
 - (void)didReceiveDisconnectEvent:(NSNotification*)notification
@@ -77,6 +98,36 @@
     NSLog(@"Disconnect event");
     
     _myo = nil;
+    
+    _connectingLabel.text = @"Deconnected from Myo";
+    _reccordExerciceButton.hidden = YES;
+    _deleteTestDataButton.hidden = YES;
+    _exerciceButton.hidden = YES;
 }
+
+- (IBAction)reccordExerciceClick:(id)sender
+{
+    [self.navigationController pushViewController:[SSAReccordViewController new] animated:YES];
+}
+
+- (IBAction)deleteTestDataClick:(id)sender
+{
+    NSLog(@"Retreiving existing exercice");
+    PFQuery *query = [PFQuery queryWithClassName:@"ExerciceData"];
+    [query whereKey:@"typeID" equalTo:@99];
+    query.limit = 1000;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *existingObjects, NSError *error) {
+        NSLog(@"Deleting %ld existing objects", (long)existingObjects.count);
+        [PFObject deleteAllInBackground:existingObjects block:^(BOOL succeeded, NSError *error) {
+            NSLog(@"Deleted with success: %d", succeeded);
+        }];
+    }];
+}
+
+- (IBAction)exerciceClick:(id)sender
+{
+    [self.navigationController pushViewController:[SSAExerciceViewController new] animated:YES];
+}
+
 
 @end
