@@ -17,6 +17,8 @@
 		B291B8AE19D7A4B000EDE351 /* SSAReccordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B291B8AC19D7A4B000EDE351 /* SSAReccordViewController.m */; };
 		B291B8AF19D7A4B000EDE351 /* SSAReccordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B291B8AD19D7A4B000EDE351 /* SSAReccordViewController.xib */; };
 		B291B8B119D7AC7400EDE351 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B291B8B019D7AC7400EDE351 /* MyoKit.framework */; };
+		B2A8458419D84B000011D1AD /* SSACoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8458319D84B000011D1AD /* SSACoordinates.m */; };
+		B2A8458819D861520011D1AD /* SSAResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8458719D861520011D1AD /* SSAResultViewController.m */; };
 		B2CBD9E319D7B58B00E78005 /* SSAExerciceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBD9E119D7B58B00E78005 /* SSAExerciceViewController.m */; };
 		B2CBD9E419D7B58B00E78005 /* SSAExerciceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2CBD9E219D7B58B00E78005 /* SSAExerciceViewController.xib */; };
 		B2DD42EF19D6FCBD0002AAED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DD42EE19D6FCBD0002AAED /* main.m */; };
@@ -56,6 +58,10 @@
 		B291B8AC19D7A4B000EDE351 /* SSAReccordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSAReccordViewController.m; path = Classes/ViewControllers/ReccordVC/SSAReccordViewController.m; sourceTree = "<group>"; };
 		B291B8AD19D7A4B000EDE351 /* SSAReccordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SSAReccordViewController.xib; path = Classes/ViewControllers/ReccordVC/SSAReccordViewController.xib; sourceTree = "<group>"; };
 		B291B8B019D7AC7400EDE351 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
+		B2A8458219D84B000011D1AD /* SSACoordinates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSACoordinates.h; path = Classes/Models/Coordinates/SSACoordinates.h; sourceTree = "<group>"; };
+		B2A8458319D84B000011D1AD /* SSACoordinates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSACoordinates.m; path = Classes/Models/Coordinates/SSACoordinates.m; sourceTree = "<group>"; };
+		B2A8458619D861520011D1AD /* SSAResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSAResultViewController.h; path = Classes/ViewControllers/ResultVC/SSAResultViewController.h; sourceTree = "<group>"; };
+		B2A8458719D861520011D1AD /* SSAResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSAResultViewController.m; path = Classes/ViewControllers/ResultVC/SSAResultViewController.m; sourceTree = "<group>"; };
 		B2CBD9E019D7B58B00E78005 /* SSAExerciceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSAExerciceViewController.h; path = Classes/ViewControllers/ExerciceVC/SSAExerciceViewController.h; sourceTree = "<group>"; };
 		B2CBD9E119D7B58B00E78005 /* SSAExerciceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSAExerciceViewController.m; path = Classes/ViewControllers/ExerciceVC/SSAExerciceViewController.m; sourceTree = "<group>"; };
 		B2CBD9E219D7B58B00E78005 /* SSAExerciceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SSAExerciceViewController.xib; path = Classes/ViewControllers/ExerciceVC/SSAExerciceViewController.xib; sourceTree = "<group>"; };
@@ -174,6 +180,32 @@
 			name = "Reccord VC";
 			sourceTree = "<group>";
 		};
+		B2A8458019D84AD10011D1AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B2A8458119D84AD70011D1AD /* Coordinates */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B2A8458119D84AD70011D1AD /* Coordinates */ = {
+			isa = PBXGroup;
+			children = (
+				B2A8458219D84B000011D1AD /* SSACoordinates.h */,
+				B2A8458319D84B000011D1AD /* SSACoordinates.m */,
+			);
+			name = Coordinates;
+			sourceTree = "<group>";
+		};
+		B2A8458519D8612C0011D1AD /* Result VC */ = {
+			isa = PBXGroup;
+			children = (
+				B2A8458619D861520011D1AD /* SSAResultViewController.h */,
+				B2A8458719D861520011D1AD /* SSAResultViewController.m */,
+			);
+			name = "Result VC";
+			sourceTree = "<group>";
+		};
 		B2CBD9DF19D7B54500E78005 /* Exercice VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +278,7 @@
 		B2DD431919D6FD230002AAED /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B2A8458019D84AD10011D1AD /* Models */,
 				B291B88F19D76DDB00EDE351 /* Categories */,
 				B291B88A19D76BA700EDE351 /* Utils */,
 				B2DD431A19D6FD290002AAED /* View controllers */,
@@ -256,6 +289,7 @@
 		B2DD431A19D6FD290002AAED /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B2A8458519D8612C0011D1AD /* Result VC */,
 				B2CBD9DF19D7B54500E78005 /* Exercice VC */,
 				B291B8AA19D7A49B00EDE351 /* Reccord VC */,
 				B291B89819D770B700EDE351 /* Start VC */,
@@ -416,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2DD42F219D6FCBD0002AAED /* AppDelegate.m in Sources */,
+				B2A8458419D84B000011D1AD /* SSACoordinates.m in Sources */,
 				B2CBD9E319D7B58B00E78005 /* SSAExerciceViewController.m in Sources */,
 				B2DD431F19D6FD790002AAED /* SSAHomeViewController.m in Sources */,
 				B291B89619D76E6D00EDE351 /* NSMutableArray+SSAQueueStack.m in Sources */,
@@ -424,6 +459,7 @@
 				B291B8AE19D7A4B000EDE351 /* SSAReccordViewController.m in Sources */,
 				B291B89C19D770D000EDE351 /* SSAStartViewController.m in Sources */,
 				B291B88619D7676800EDE351 /* SSAChartViewController.m in Sources */,
+				B2A8458819D861520011D1AD /* SSAResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

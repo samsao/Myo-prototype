@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "JBChartView/JBLineChartView.h"
+#import <MyoKit/MyoKit.h>
 
 @interface SSAExerciceViewController : UIViewController <JBLineChartViewDelegate, JBLineChartViewDataSource>
+
+@property (strong, nonatomic) TLMMyo *myo;
 
 @end

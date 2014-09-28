@@ -126,7 +126,9 @@
 
 - (IBAction)exerciceClick:(id)sender
 {
-    [self.navigationController pushViewController:[SSAExerciceViewController new] animated:YES];
+    SSAExerciceViewController *vc = [SSAExerciceViewController new];
+    vc.myo = _myo;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
